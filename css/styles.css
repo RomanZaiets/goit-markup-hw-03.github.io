@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 24px;    
+    column-gap: 24px;
     }
     button {
     border-radius: 4px;
@@ -175,6 +175,7 @@
     /* --------MAIN------------ */
     /* --------HERO------------ */
     .hero {
+    display: block;
     padding-top: 188px;
     padding-bottom: 188px;
     background: var(--background-hero-footer-color);
@@ -186,10 +187,7 @@
     text-align: center;
     letter-spacing: 0.02em;
     color:var(--white-one);
-    text-align: center;
-    letter-spacing: 0.02em;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-bottom: 48px;
     }
     .hero-btn{
@@ -198,17 +196,14 @@
     color:var(--btn-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     }
     
     /* --------ABOUT---------- */
-    .about-conteiner{
-    display: flex;
-    box-sizing:content-box; 
-    }
     .about-list{
-    flex-wrap: nowrap;    
+    display: flex;    
+    flex-wrap: nowrap;
+    align-items: flex-start;    
     }
     .about-item{
     display: flex;
@@ -230,12 +225,19 @@
     .team {
     background:var(--white-two);
     }
-    .team-list{
-    display: flex;
-    flex-wrap: wrap;
+    .team-item-wrap{
+    padding: 32px 16px 32px 16px;
+    background:var(--white-one);
+    box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%), 0px 2px 1px rgb(46 47 66 / 8%);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;       
     }
-    /* -----PORTFOLIO--------- */
-    .containet-portfolio-btn{
+      /* -----PORTFOLIO--------- */
+    .portfolio-list{
+    display: flex;    
+    row-gap: 48px;    
+    }  
+    .portfolio-list-btn{
     display: flex;    
     justify-content:center;
     margin-bottom: 72px;
@@ -246,7 +248,11 @@
     color: var(--btn-color);
     border: 1px solid var(--white-three);
     border-radius: 4px;}
-    .portfolio-item{
+    .portfolio-item-wrap{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;  
+    border-top: none;   
     }
     
     /* ---------FOOTER--------- */
@@ -265,9 +271,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white-two);
+    margin-bottom: 16px;
     }
     .footer-text {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+        position: absolute;
+    max-width: 300px;
     color:var(--white-three);
     }
