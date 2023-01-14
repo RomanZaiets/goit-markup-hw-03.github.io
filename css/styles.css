@@ -88,7 +88,7 @@
     text-decoration: none;
     } 
     .border{
-        border: 1px solid var(--white-three);    
+    border: 1px solid var(--white-three);    
     }  
     /* ----------BODY------------ */
     body{
@@ -176,7 +176,6 @@
     /* --------MAIN------------ */
     /* --------HERO------------ */
     .hero {
-    display: block;
     padding-top: 188px;
     padding-bottom: 188px;
     background: var(--background-hero-footer-color);
@@ -192,6 +191,7 @@
     margin-bottom: 48px;
     }
     .hero-btn{
+    border: none;     
     padding: 16px 32px;
     background: var(--btn-color);
     color:var(--btn-text-color);
@@ -202,20 +202,15 @@
     
     /* --------ABOUT---------- */
     .about-list{
-    display: flex;    
-    flex-wrap: nowrap;
-    align-items: flex-start;    
+    display: flex; 
+    gap: 24px;   
     }
     .about-item{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;    
+    width: 294px;
     }
      /* --------DOING---------- */
     .doing{
-    padding-bottom: 120px;
+    padding-top: 0;
     }
     .doing-list{
     display: flex;
@@ -229,6 +224,10 @@
     .team {
     background:var(--white-two);
     }
+    .team-list{
+    display: flex;
+    gap: 24px;    
+    }
     .team-item-wrap{
     padding: 32px 16px 32px 16px;
     background:var(--white-one);
@@ -237,12 +236,17 @@
     text-align: center;       
     }
     .team-item{
-        flex-basis: calc((100% - 3*24px)/4);   
+    flex-basis: calc((100% - 3*24px)/4);   
     }
       /* -----PORTFOLIO--------- */
+    .portfolio{
+    padding-top: 96px;
+    }  
     .portfolio-list{
     display: flex;    
-    row-gap: 48px;    
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;  
     }  
     .portfolio-list-btn{
     display: flex;    
@@ -270,19 +274,17 @@
     background-color: var(--background-hero-footer-color)
     }
     .footer-logo {
+    display: block;
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 18px;
     line-height: 1.16;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white-two);
     margin-bottom: 16px;
     }
     .footer-text {
-        position: absolute;
     max-width: 300px;
     color:var(--white-three);
     }
